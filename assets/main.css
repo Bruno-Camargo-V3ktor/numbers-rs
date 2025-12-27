@@ -1,8 +1,49 @@
-/* App-wide styling */
+:root {
+    --content-primary: #FFFFFF;
+    --content-secondary: #C7C9CC;
+    --content-tertiary: #D9D9D9;
+    --content-brand: #C58DE7;
+    --content-inverse: #030203;
+
+    --bg-primary: #020202;
+    --bg-secondary: #111012;
+    --bg-tertiary: #24222E;
+    --bg-brand: #C58DE7;
+    --bg-gray: #3D3D3D;
+
+    --accent-pink: #D586E0;
+    --accent-blue: #91A1FA;
+    --accent-green: #77C0AF;
+    --accent-lime: #D1DC97;
+    --accent-red: #E9A9B3;
+
+    --paragraph-sm-font: "Roboto Flex", sans-serif;
+    --paragraph-sm-size: 12;
+    --paragraph-sm-weight: 600;
+
+    --paragraph-md-font: "Roboto Flex", sans-serif;
+    --paragraph-md-size: 14;
+    --paragraph-md-weight: 600;
+
+    --paragraph-lg-font: "Roboto Flex", sans-serif;
+    --paragraph-lg-size: 16;
+    --paragraph-lg-weight: 600;
+
+    --paragraph-lg-font: "Roboto Flex", sans-serif;
+    --paragraph-lg-size: 16;
+    --paragraph-lg-weight: 600;
+
+    --overline-font: "Roboto Mono", sans-serif;
+    --overline-size: 16;
+    --overline-weight: bold;
+}
+
 body {
-    background-color: #020202;
-    color: #FFFFFF;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--content-primary);
+    font-family: var(--paragraph-md-font);
+    font-size: var(--paragraph-md-size);
+    font-weight: var(--paragraph-md-weight);
     margin: 0;
 }
 

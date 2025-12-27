@@ -13,6 +13,12 @@ fn main() {
 #[component]
 fn App() -> Element {
     rsx! {
+        document::Link { rel: "preconnect", href: "https://fonts.googleapis.com" }
+        document::Link { rel: "preconnect", href: "https://fonts.gstatic.com" }
+        document::Link {
+            rel: "stylesheet",
+            href: "https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap",
+        }
         document::Link { rel: "stylesheet", href: MAIN_CSS }
         MainPage {}
     }
