@@ -19,6 +19,19 @@ fn App() -> Element {
             rel: "stylesheet",
             href: "https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap",
         }
+        //
+        document::Link {
+            rel: "stylesheet",
+            r#type: "text/css",
+            href: "https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css",
+        }
+        document::Link {
+            rel: "stylesheet",
+            r#type: "text/css",
+            href: "https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css",
+        }
+        //
+
         document::Link { rel: "stylesheet", href: MAIN_CSS }
         MainPage {}
     }
