@@ -1,3 +1,5 @@
+use crate::components::TitleComponent;
+
 use super::{
     form::FormContianer, infos::InfosContianer, questions::QuestionsContainer,
     result::ResultContainer,
@@ -15,6 +17,7 @@ pub fn ContentContainer() -> Element {
     let state = use_signal(|| StateNumbers::default());
 
     rsx! {
+        TitleComponent {}
         div { class: "content-container",
             InfosContianer {}
             if state().numbers.is_none() {

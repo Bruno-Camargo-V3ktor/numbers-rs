@@ -6,6 +6,7 @@ mod pages;
 mod utils;
 
 const MAIN_CSS: Asset = asset!("/assets/main.css");
+const FAVICON: Asset = asset!("/assets/icon.svg");
 
 fn main() {
     dioxus::launch(App);
@@ -34,6 +35,7 @@ fn App() -> Element {
         //
 
         document::Link { rel: "stylesheet", href: MAIN_CSS }
+        document::Link { rel: "icon", r#type: "image/x-icon", href: FAVICON }
         MainPage {}
     }
 }
