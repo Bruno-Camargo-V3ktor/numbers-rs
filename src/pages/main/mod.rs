@@ -1,8 +1,12 @@
 use dioxus::prelude::*;
 
-use crate::pages::main::content::ContentContainer;
+use content::ContentContainer;
 
 mod content;
+mod form;
+mod infos;
+mod questions;
+mod result;
 
 const BG_IMAGE: Asset = asset!("/assets/bg.png");
 
