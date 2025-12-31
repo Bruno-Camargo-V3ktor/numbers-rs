@@ -26,6 +26,6 @@ pub fn ContentContainer() -> Element {
                 ResultContainer { state }
             }
         }
-        footer { class: "footer-mobile", style: "display: none", QuestionsContainer {} }
+        footer { class: "footer-mobile", QuestionsContainer {} }
     }
 }

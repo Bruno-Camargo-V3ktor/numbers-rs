@@ -20,32 +20,28 @@
     --paragraph-sm-font: "Roboto Flex", sans-serif;
     --paragraph-sm-size: 12;
     --paragraph-sm-weight: 600;
+}
 
-    --paragraph-md-font: "Roboto Flex", sans-serif;
-    --paragraph-md-size: 14;
-    --paragraph-md-weight: 600;
-
-    --paragraph-lg-font: "Roboto Flex", sans-serif;
-    --paragraph-lg-size: 16;
-    --paragraph-lg-weight: 600;
-
-    --paragraph-lg-font: "Roboto Flex", sans-serif;
-    --paragraph-lg-size: 16;
-    --paragraph-lg-weight: 600;
-
-    --overline-font: "Roboto Mono", sans-serif;
-    --overline-size: 16;
-    --overline-weight: bold;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: var(--bg-primary);
     color: var(--content-primary);
-    font-family: var(--paragraph-md-font);
-    font-size: var(--paragraph-md-size);
-    font-weight: var(--paragraph-md-weight);
+    font-family: var(--paragraph-sm-font);
+    font-size: var(--paragraph-sm-size);
+    font-weight: var(--paragraph-sm-weight);
     margin: 0;
 }
+
+.icon {
+    display: inline;
+}
+
+
 
 .main-container {
     display: flex;
@@ -61,4 +57,75 @@ body {
     height: 100vh;
 
     overflow: hidden;
+}
+
+.content-container {
+    display: flex;
+}
+
+.infos-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    max-width: 450px;
+    gap: 20px;
+}
+
+.infos-container .overline {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--content-secondary);
+}
+
+.infos-container .header {
+    font-size: 72px;
+    font-weight: bold;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: var(--content-primary);
+    margin-bottom: 48px;
+}
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.question-container {
+    display: flex;
+    gap: 14px;
+
+    align-items: start;
+}
+
+.question-texts {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.question-icon {
+    color: var(--content-brand);
+    font-size: 26px;
+    text-align: center;
+}
+
+.question-title {
+    color: var(--content-brand);
+    font-size: 14px;
+}
+
+.question-description {
+    color: var(--content-primary);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.footer-mobile {
+    display: none;
 }
