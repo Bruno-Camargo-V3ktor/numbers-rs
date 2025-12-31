@@ -1,4 +1,4 @@
-use crate::pages::main::content::StateNumbers;
+use crate::{components::Icon, pages::main::content::StateNumbers};
 use dioxus::prelude::*;
 
 #[derive(Props, PartialEq, Clone)]
@@ -31,7 +31,10 @@ pub fn ResultContainer(props: ResultContainerProps) -> Element {
             button { class: "result-reset-btn", onclick: on_click_reset,
                 div {
                     span { "Sortear novamente" }
-                    i { class: "ph ph-clock-counter-clockwise" }
+                    Icon {
+                        name: "clock-counter-clockwise",
+                        class: "icon-btn-reset",
+                    }
                 }
             }
         }

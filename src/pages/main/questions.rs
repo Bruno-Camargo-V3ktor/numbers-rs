@@ -1,5 +1,7 @@
 use dioxus::prelude::*;
 
+use crate::components::Icon;
+
 #[component]
 pub fn QuestionsContainer() -> Element {
     rsx! {
@@ -27,7 +29,7 @@ struct QuestionProps {
 fn Question(props: QuestionProps) -> Element {
     rsx! {
         div { class: "question-container",
-            i { class: "ph ph-seal-question" }
+            Icon { name: "seal-question", class: "question-icon" }
             div { class: "question-texts",
                 h5 { class: "question-title", "{props.question}" }
                 p { class: "question-description", "{props.description}" }

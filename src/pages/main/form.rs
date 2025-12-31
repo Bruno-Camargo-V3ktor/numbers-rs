@@ -1,4 +1,4 @@
-use crate::{pages::main::content::StateNumbers, utils::random::rand_rang};
+use crate::{components::Icon, pages::main::content::StateNumbers, utils::random::rand_rang};
 use dioxus::prelude::*;
 
 #[derive(Props, PartialEq, Clone)]
@@ -101,7 +101,7 @@ pub fn FormContianer(props: FormContianerProps) -> Element {
                 button { class: "btn-random", onclick: on_submit_form,
                     div {
                         "Sortear"
-                        i { class: "ph ph-arrow-right" }
+                        Icon { name: "arrow-right", class: "icon-btn-sorted" }
                     }
                 }
             }
