@@ -41,7 +41,16 @@ body {
     display: inline;
 }
 
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 
+    position: relative;
+    right: 30%;
+    bottom: 15%;
+}
 
 .main-container {
     display: flex;
@@ -61,6 +70,8 @@ body {
 
 .content-container {
     display: flex;
+    align-items: center;
+    justify-content: start;
 }
 
 .infos-container {

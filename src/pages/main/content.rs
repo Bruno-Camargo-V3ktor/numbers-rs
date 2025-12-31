@@ -17,7 +17,7 @@ pub fn ContentContainer() -> Element {
     let state = use_signal(|| StateNumbers::default());
 
     rsx! {
-        TitleComponent {}
+        //TitleComponent {}
         div { class: "content-container",
             InfosContianer {}
             if state().numbers.is_none() {

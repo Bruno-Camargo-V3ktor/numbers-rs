@@ -1,6 +1,7 @@
+use content::ContentContainer;
 use dioxus::prelude::*;
 
-use content::ContentContainer;
+use crate::components::TitleComponent;
 
 mod content;
 mod form;
@@ -13,6 +14,9 @@ const BG_IMAGE: Asset = asset!("/assets/bg.png");
 #[component]
 pub fn MainPage() -> Element {
     rsx! {
-        div { class: "main-container", background_image: "url({BG_IMAGE})", ContentContainer {} }
+        div { class: "main-container", background_image: "url({BG_IMAGE})",
+            TitleComponent {}
+            ContentContainer {}
+        }
     }
 }
