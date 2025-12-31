@@ -95,7 +95,10 @@ pub fn FormContianer(props: FormContianerProps) -> Element {
                 }
 
                 if let Some(msg) = msg_error() {
-                    p { class: "form-error", "{msg}" }
+                    div { class: "form-error",
+                        Icon { name: "warning", class: "icon-error" }
+                        p { "{msg}" }
+                    }
                 }
 
                 button { class: "btn-random", onclick: on_submit_form,
