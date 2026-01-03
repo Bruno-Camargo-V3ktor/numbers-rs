@@ -255,6 +255,24 @@ body {
     font-weight: bold;
 }
 
+.form-error {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    color: var(--content-brand);
+    font-weight: bold;
+
+    margin-top: 32px;
+    gap: 10px;
+}
+
+.icon-error {
+    font-size: 32px;
+}
+
 /* Resultado */
 
 .result-container{
