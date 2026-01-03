@@ -56,7 +56,6 @@ pub fn FormContianer(props: FormContianerProps) -> Element {
                 div { class: "numbers-inputs",
                     InputNumber {
                         title: "números",
-                        default: quantity_input(),
                         min: 1,
                         max: 100,
                         name: "quantity",
@@ -66,7 +65,6 @@ pub fn FormContianer(props: FormContianerProps) -> Element {
 
                     InputNumber {
                         title: "de",
-                        default: from_input(),
                         min: 0,
                         max: 1000,
                         name: "from",
@@ -77,7 +75,6 @@ pub fn FormContianer(props: FormContianerProps) -> Element {
 
                     InputNumber {
                         title: "Ate",
-                        default: at_input(),
                         min: 1,
                         max: 1000,
                         name: "at",
@@ -121,7 +118,6 @@ pub fn FormContianer(props: FormContianerProps) -> Element {
 struct InputNumberProps {
     pub title: String,
     pub name: String,
-    pub default: u16,
     pub min: u16,
     pub max: u16,
     pub signal: Signal<u16>,
@@ -134,8 +130,16 @@ fn InputNumber(props: InputNumberProps) -> Element {
     let mut msg_error = props.msg_error.clone();
 
     let on_changed = move |evt: Event<FormData>| {
-        signal.set(evt.value().parse::<u16>().unwrap_or(0));
-        msg_error.set(None);
+        let old_value = signal();
+        if let Ok(value) = evt.value().parse::<u16>() {
+            signal.set(value);
+        } else {
+            signal.set(old_value);
+        }
+
+        if msg_error().is_some() {
+            msg_error.set(None);
+        }
     };
 
     rsx! {
@@ -148,7 +152,7 @@ fn InputNumber(props: InputNumberProps) -> Element {
                 r#type: "text",
                 min: "{props.min}",
                 max: "{props.max}",
-                value: "{props.default}",
+                value: signal(),
 
                 oninput: on_changed,
             }
