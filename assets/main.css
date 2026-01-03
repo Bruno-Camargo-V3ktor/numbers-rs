@@ -254,3 +254,91 @@ body {
     font-size: 24px;
     font-weight: bold;
 }
+
+/* Resultado */
+
+.result-container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    align-items: center;
+
+    width: 500px;
+}
+
+.result-title {
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.result-count {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.result-numbers {
+    display: flex;
+    gap: 14px;
+
+    max-width: 100%;
+
+    margin-top: 48px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.number-container {
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 80px;
+    min-height: 24px;
+
+    padding: 12px 0px;
+    background-color: var(--bg-secondary);
+
+    border-radius: 6px;
+    border: none;
+
+    color: var(--content-brand);
+    font-size: 40px;
+    text-align: center;
+    font-family: "Sora", sans-serif;
+    font-weight: bold;
+}   
+
+.result-reset-btn {
+    display: flex;
+
+    width: 100%;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 18px;
+
+    margin-top: 48px;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--bg-tertiary);
+    color: var(--content-primary);
+    border: none;
+    border-radius: 8px;
+}
+
+.result-btn-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon-btn-reset {
+    font-size: 24px;
+    font-weight: bold;
+}

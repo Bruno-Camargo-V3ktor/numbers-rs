@@ -29,7 +29,7 @@ pub fn ResultContainer(props: ResultContainerProps) -> Element {
                 }
             }
             button { class: "result-reset-btn", onclick: on_click_reset,
-                div {
+                div { class: "result-btn-content",
                     span { "Sortear novamente" }
                     Icon {
                         name: "clock-counter-clockwise",
