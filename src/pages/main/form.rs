@@ -72,7 +72,7 @@ pub fn FormContianer(props: FormContianerProps) -> Element {
                         name: "from",
                         signal: from_input.clone(),
                         msg_error: msg_error.clone(),
-
+                    
                     }
 
                     InputNumber {
@@ -85,13 +85,18 @@ pub fn FormContianer(props: FormContianerProps) -> Element {
                         msg_error: msg_error.clone(),
                     }
                 }
-                input {
-                    class: "checkbox-repetion",
-                    r#type: "checkbox",
-                    checked: "true",
-                    oninput: move |e| {
-                        repetions.set(e.value().parse::<bool>().unwrap());
-                    },
+
+                div { class: "checkbox-container",
+                    input {
+                        class: "checkbox-repetion",
+                        id: "checkbox-repetion",
+                        r#type: "checkbox",
+                        checked: "true",
+                        oninput: move |e| {
+                            repetions.set(e.value().parse::<bool>().unwrap());
+                        },
+                    }
+                    label { class: "checkbox-label", r#for: "checkbox-repetion", "Não repetir número" }
                 }
 
                 if let Some(msg) = msg_error() {
@@ -102,7 +107,7 @@ pub fn FormContianer(props: FormContianerProps) -> Element {
                 }
 
                 button { class: "btn-random", onclick: on_submit_form,
-                    div {
+                    div { class: "btn-content",
                         "Sortear"
                         Icon { name: "arrow-right", class: "icon-btn-sorted" }
                     }
@@ -134,17 +139,19 @@ fn InputNumber(props: InputNumberProps) -> Element {
     };
 
     rsx! {
-        label { class: "number-label", r#for: "{props.name}", "{props.title}" }
-        input {
-            class: "number-input",
-            name: "{props.name}",
-            id: "{props.name}",
-            r#type: "number",
-            min: "{props.min}",
-            max: "{props.max}",
-            value: "{props.default}",
+        div { class: "number-input-container",
+            label { class: "number-label", r#for: "{props.name}", "{props.title}" }
+            input {
+                class: "number-input",
+                name: "{props.name}",
+                id: "{props.name}",
+                r#type: "text",
+                min: "{props.min}",
+                max: "{props.max}",
+                value: "{props.default}",
 
-            oninput: on_changed,
+                oninput: on_changed,
+            }
         }
     }
 }
