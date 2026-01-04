@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="/assets/icon.svg" alt="Logo NUMBERS" width="150">
+  <img src="/assets/icon.svg" alt="Logo NUMBERS" width="50">
   <h1>NUMBERS</h1>
   
   <p>
@@ -34,6 +34,6 @@ O **NUMBERS** é um sistema desenvolvido para gerar números aleatórios de form
 
 Para testar a aplicação agora mesmo, clique no link abaixo:
 
-### [🔗 Acessar NUMBERS Online](LINK_DO_SITE_AQUI)
+### [🔗 Acessar NUMBERS Online](https://github.com/Bruno-Camargo-V3ktor.github.io/numbers-rs)
 
 ---
