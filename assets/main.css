@@ -360,3 +360,58 @@ body {
     font-size: 24px;
     font-weight: bold;
 }
+
+@media (max-width: 1000px) {
+    .title-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        position: relative;
+        right: 0;
+        bottom: 0;
+
+        margin: 64px 0;
+    }
+
+    .main-container {
+        overflow-y: scroll;
+        justify-content: start;
+    }
+
+    .content-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 90%;
+    }
+
+    .infos-container {
+        justify-content: center;
+        min-width: 90%;
+    }
+
+    .infos-container .header {
+        margin-bottom: 0px;
+        width: 80%;
+    }
+
+    .form-container {
+        min-width: 90%;
+        margin-top: 0px;
+    }
+
+    .infos-container .questions {
+        display: none;
+    }
+
+    .footer-mobile {
+        display: flex;
+
+        max-width: 90%;
+        margin-top: 64px;
+        margin-bottom: 64px;
+    }
+}
