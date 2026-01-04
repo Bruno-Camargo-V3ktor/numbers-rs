@@ -1,25 +1,39 @@
-# Development
+<div align="center">
+  <img src="/assets/icon.svg" alt="Logo NUMBERS" width="150">
+  <h1>NUMBERS</h1>
+  
+  <p>
+    <strong>Gerador de Números Aleatórios Robusto e Flexível</strong>
+  </p>
+</div>
 
-Your new bare-bones project includes minimal organization with a single `main.rs` file and a few assets.
+<br />
 
-```
-project/
-├─ assets/ # Any assets that are used by the app should be placed here
-├─ src/
-│  ├─ main.rs # main.rs is the entry point to your application and currently contains all components for the app
-├─ Cargo.toml # The Cargo.toml file defines the dependencies and feature flags for your project
-```
+## 📷 Funcionamento
 
-### Serving Your App
+Veja o sistema em ação:
 
-Run the following command in the root of your project to start developing with the default platform:
+![Demonstração do Sistema](/exemple.gif)
 
-```bash
-dx serve
-```
+---
 
-To run for a different platform, use the `--platform platform` flag. E.g.
-```bash
-dx serve --platform desktop
-```
+## 📖 Sobre o Projeto
 
+O **NUMBERS** é um sistema desenvolvido para gerar números aleatórios de forma controlada e segura. Ele permite que o usuário configure parâmetros específicos para obter resultados precisos, sendo ideal para sorteios, amostragens de dados ou testes.
+
+## ✨ Funcionalidades Principais
+
+* **Configuração de Intervalo:** Defina manualmente o número **mínimo** e **máximo** para o sorteio.
+* **Controle de Quantidade:** Escolha exatamente quantos números deseja gerar de uma só vez.
+* **Modo Único vs. Repetição:** Opção para permitir ou bloquear números repetidos na geração.
+* **🛡️ Sistema de Validação Inteligente:** O sistema previne travamentos e erros lógicos alertando o usuário caso:
+    * O valor máximo seja menor que o mínimo.
+    * A quantidade de números únicos solicitada seja maior do que o intervalo disponível (evitando loops infinitos).
+
+## 🚀 Como Usar
+
+Para testar a aplicação agora mesmo, clique no link abaixo:
+
+### [🔗 Acessar NUMBERS Online](LINK_DO_SITE_AQUI)
+
+---
