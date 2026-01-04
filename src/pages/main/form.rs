@@ -1,4 +1,8 @@
-use crate::{components::Icon, pages::main::content::StateNumbers, utils::random::rand_rang};
+use crate::{
+    components::{ Icon, switch::{ Switch, SwitchThumb } },
+    pages::main::content::StateNumbers,
+    utils::random::rand_rang,
+};
 use dioxus::prelude::*;
 
 #[derive(Props, PartialEq, Clone)]
@@ -24,13 +28,13 @@ pub fn FormContianer(props: FormContianerProps) -> Element {
         let repetions = repetions();
 
         if quantity == 0 {
-            msg_error.set(Some(String::from(
-                "A quantidade minima de números tem que ser maior que 0",
-            )));
+            msg_error.set(
+                Some(String::from("A quantidade minima de números tem que ser maior que 0"))
+            );
             return;
         }
 
-        if (at <= from) || (repetions && (at - from) < quantity) {
+        if at <= from || (repetions && at - from < quantity) {
             msg_error.set(Some(String::from("Intervalo de valores invalido")));
             return;
         }
@@ -84,14 +88,12 @@ pub fn FormContianer(props: FormContianerProps) -> Element {
                 }
 
                 div { class: "checkbox-container",
-                    input {
-                        class: "checkbox-repetion",
-                        id: "checkbox-repetion",
-                        r#type: "checkbox",
-                        checked: "true",
-                        oninput: move |e| {
-                            repetions.set(e.value().parse::<bool>().unwrap());
+                    Switch {
+                        checked: repetions(),
+                        on_checked_change: move |e| {
+                            repetions.set(e);
                         },
+                        SwitchThumb {}
                     }
                     label { class: "checkbox-label", r#for: "checkbox-repetion", "Não repetir número" }
                 }
