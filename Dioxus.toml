@@ -1,10 +1,12 @@
 [application]
+name = "numbers"
+default_platform = "web"
 
 [web.app]
 
 # HTML title tag content
 title = "NUMBERS"
-
+base_path = "/numbers-rs/"
 # include `assets` in web platform
 [web.resource]
 
