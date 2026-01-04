@@ -34,6 +34,6 @@ O **NUMBERS** é um sistema desenvolvido para gerar números aleatórios de form
 
 Para testar a aplicação agora mesmo, clique no link abaixo:
 
-### [🔗 Acessar NUMBERS Online](https://github.com/Bruno-Camargo-V3ktor.github.io/numbers-rs)
+### [🔗 Acessar NUMBERS Online](https://bruno-camargo-v3ktor.github.io/numbers-rs/)
 
 ---
